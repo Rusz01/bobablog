@@ -3,5 +3,12 @@
 {% block title %}Blog - Bobablog{% endblock title %}
 
 {% block body %}
-this is my Blog page
+
+<h1>Welcom to Bobablog</h1>
+
+{% for blog in blogs %}
+{{blog.title}}
+<br>
+{% endfor %}
+
 {% endblock body %}
