@@ -4,7 +4,7 @@ from blog import views
 
 urlpatterns = [
    path('', views.home, name='home'),
-   path('blog', views.blog, name='blog'),
+   path('bloghome', views.bloghome, name='bloghome'),
    path('blogpost/<str:slug>', views.blogpost, name='blog'),
    path('contact', views.contact, name='contact'),
 ]
