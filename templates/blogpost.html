@@ -1,7 +1,13 @@
 {% extends "base.html" %}
 
-{% block title %}Contact - Bobablog{% endblock title %}
+{% block title %}Blog - Bobablog{% endblock title %}
 
 {% block body %}
-this is my Contact page
-{% endblock body %}
+<div class="container my-5" >
+   <h1 class="text-center">{{blogs.title}}</h1>
+   
+   <p>{{blogs.content|safe}}</p>
+
+  
+</div>
+   {% endblock body %}

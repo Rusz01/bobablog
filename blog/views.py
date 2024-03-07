@@ -11,7 +11,9 @@ def bloghome(request):
    return render(request, 'bloghome.html', context)
 
 def blogpost(request, slug):
-   return HttpResponse(f"You are viewing {slug}")
+   blogs = Blog.objects.filter(slug=slug).first()
+   context = {'blogs': blogs}
+   return render(request, 'blogpost.html', context)
 
 def contact(request):
    return render(request, 'contact.html')
