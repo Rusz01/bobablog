@@ -17,13 +17,13 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="/">Home</a>
+              <a class="nav-link {% block homeactive %}{% endblock homeactive %} " aria-current="page" href="/">Home</a>
             </li>
             <li class="nav-item">
-               <a class="nav-link active" aria-current="page" href="/bloghome">Blog</a>
+               <a class="nav-link {% block blogactive %}{% endblock blogactive %} " aria-current="page" href="/bloghome">Blog</a>
              </li>
              <li class="nav-item">
-               <a class="nav-link active" aria-current="page" href="/contact">Contact</a>
+               <a class="nav-link {% block contactactive %}{% endblock contactactive %} " aria-current="page" href="/contact">Contact</a>
              </li>
           </ul>
           <form action="/search" method="GET" class="d-flex" role="search">
@@ -37,6 +37,11 @@
 
    {% block body %}{% endblock body %}
 
+
+   <footer class="py-3 text-center">
+    Copyright &copy 2024 | Bobablog | All right reserved
+
+   </footer>
     
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
   </body>
