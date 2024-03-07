@@ -3,12 +3,23 @@
 {% block title %}Blog - Bobablog{% endblock title %}
 
 {% block body %}
+<div class="container my-5" >
+   <h1 class="text-center">Welcome to Bobablog</h1>
+   
+   {% for blog in blogs %}
 
-<h1>Welcom to Bobablog</h1>
+   <div class="d-flex mt-5">
+      <div class="flex-shrink-0">
+        <img src="..." alt="...">
+      </div>
+      <div class="flex-grow-1 ms-3">
+         <h5 class="mt-0"> <a href="/blogpost/{{blog.slug}}" class="text-dark text-decoration-none" > {{blog.title}}</a></h5>
+         <a href="/blogpost/{{blog.slug}}" class="text-dark text-decoration-none" >  <p>{{blog.content | slice:345}}...</p> </a>
+         <button class="btn btn-primary" >Read More</button>
+      </div>
+    </div>
 
-{% for blog in blogs %}
-{{blog.title}}
-<br>
-{% endfor %}
-
-{% endblock body %}
+   {% endfor %}
+   
+</div>
+   {% endblock body %}
